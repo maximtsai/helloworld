@@ -6,25 +6,23 @@ By the end of this video, you will have THIS running in your browser using just 
 
 Step 1, Download Phaser 3
 
-Go to Phaser.io/download, click on the download button, and choose phaser.min.js. This is the final optimized version of Phaser for end users. Create a new folder for your game and drop the file inside.
+Go to Phaser.io/download, click on the download button, and choose phaser.min.js. Create a new folder for your game and drop the Phaser library file inside.
 
 Step 2, Set Up Your Files. 
-In your Phaser folder, create two files. Rename them to index.html and main.js
+In your Phaser folder, create two files. Rename them to index.html and main.js. We will use these to run the Phaser 3 library.
 
 Open index.html in a text editor and add basic HTML tags with a head and body. Inside the head tag, add two <script> tags, one for phaser.min.js, one for main.js.
 
-Now open main.js and type new Phaser dot Game parenthesis curly braces;
+Now open main.js and type new Phaser dot Game parenthesis curly braces; This will let us start up Phaser.
 
-Save and refresh your browser. You should see a black box, which is Phaser creating an empty game. To set the game's size, modify the curly braces inside Phaser.Game. I will change my game to 640 by 480 pixels by setting its width and height.
+Save and refresh your browser. You should see a black box, which is Phaser creating an empty game. To set the game's size, modify the curly braces inside Phaser.Game. I will change the width and height of my game to 640 by 480 pixels.
 
 Step 3, Making Phaser Do Stuff
 
-To make Phaser run code, add a "scene" parameter besides width and height. Give it curly brackets and in it add a "create" parameter. Set this create parameter to a JavaScript function that has "this dot add dot text, zero, zero, Hello World". Save, refresh your browser, and you should now see the text Hello World.
+To make Phaser do stuff, add a "scene" parameter besides width and height. Give it curly brackets and in there add a "create" parameter. Set this create parameter to a JavaScript function that has "this dot add dot text, zero, zero, Hello World". Save, refresh your browser, and you should now see the text Hello World.
 
-To center the text, we can change the two zeroes representing x and y position, to 320 by 240.
-To make the text bigger, we add a curly bracket in Hello World that sets fontSize.
-
-But we want to make the text bigger and more centered. We can do this by changing the two zeros which represent X and Y position to 320 by 240, and by adding an extra curly bracket that sets fontSize (remember to capitalize the S) to 50 (default fontSize is 16).
+To center the text, we can change the two zeroes representing x/y position, to 320 by 240.
+To make the text bigger, we add a curly bracket in Hello World that sets fontSize (remember to capitalize the S). I will set the size to 50 (default fontSize is 16).
 
 The text is still off center because its origin starts from the top left. Fix this by calling setOrigin on the text object with parameters 0.5, 0.5.
 
